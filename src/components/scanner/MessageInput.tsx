@@ -14,7 +14,7 @@ type Analysis = {
   recommendedActions: string[];
 };
 function highlightPhrases(text: string, phrases: string[]) {
-  const uniquePhrases = [...new Set(phrases)]
+  const uniquePhrases = Array.from(new Set(phrases))
     .filter(Boolean)
     .sort((a, b) => b.length - a.length);
 
