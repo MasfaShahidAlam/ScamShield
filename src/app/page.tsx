@@ -1,18 +1,26 @@
+import MessageInput from "@/components/scanner/MessageInput";
+
 export default function Home() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <span className="inline-block rounded border border-border bg-surface px-3 py-1 text-sm text-muted">
-        Scanner launching in the next stage
-      </span>
+    <main className="mx-auto max-w-3xl px-6 py-16">
+      <div className="mb-10 text-center">
+        <p className="mb-3 text-sm font-medium uppercase tracking-wider text-accent">
+          Scam Detection
+        </p>
 
-      <h1 className="mt-6 max-w-2xl font-display text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
-        Know if it&apos;s a scam before you click.
-      </h1>
+        <h1 className="font-display text-4xl font-bold text-foreground">
+          Know if it&apos;s a scam
+          <br />
+          before you click.
+        </h1>
 
-      <p className="mt-4 max-w-xl text-base text-muted">
-        Paste any suspicious email, text, or offer and ScamShield AI breaks
-        down exactly why it looks dangerous — not just whether it is.
-      </p>
-    </section>
+        <p className="mx-auto mt-4 max-w-xl text-muted">
+          Paste a suspicious SMS, email, WhatsApp message, or offer and
+          ScamShield AI will explain what makes it risky.
+        </p>
+      </div>
+
+      <MessageInput />
+    </main>
   );
 }
